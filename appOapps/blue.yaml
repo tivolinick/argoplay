@@ -8,9 +8,9 @@ metadata:
 spec:
   project: default
   source:
-    path: 2apps/overlays/blue/
+    path: 2apps/overlays/blue
     repoURL: https://github.com/tivolinick/argoplay
-    targetRevision: HEAD
+    targetRevision: master
   destination:
     namespace: blue
     server: https://api.argondf.cp.fyre.ibm.com:6443
