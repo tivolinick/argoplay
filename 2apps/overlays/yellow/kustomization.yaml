@@ -8,16 +8,16 @@ patches:
     group: apps
     kind: Deployment
     name: bgd
-  path: green-deployment.yaml
+  path: yellow-deployment.yaml
 - target:
     version: v1
     kind: Namespace
     name: bgd
-  path: green-namespace.yaml
+  path: yellow-namespace.yaml
 - target:
     version: v1
     group: route.openshift.io
     kind: Route
     name: bgd
-  path: green-route.yaml
+  path: yellow-route.yaml
 
