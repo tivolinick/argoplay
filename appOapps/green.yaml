@@ -10,7 +10,7 @@ spec:
   source:
     path: 2apps/overlays/green/
     repoURL: https://github.com/tivolinick/argoplay
-    targetRevision: HEAD
+    targetRevision: master
   destination:
     namespace: green
     server: https://api.argondf.cp.fyre.ibm.com:6443
