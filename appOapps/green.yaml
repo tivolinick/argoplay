@@ -1,0 +1,21 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: green
+  namespace: green
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  project: default
+  source:
+    path: 2apps/overlays/green/
+    repoURL: https://github.com/tivolinick/argoplay
+    targetRevision: HEAD
+  destination:
+    namespace: green
+    server: https://api.argondf.cp.fyre.ibm.com:6443
+  syncPolicy:
+    automated:
+      selfHeal: true
+      prune: true
+
