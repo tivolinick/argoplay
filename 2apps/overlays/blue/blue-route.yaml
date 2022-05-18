@@ -1,0 +1,6 @@
+- op: replace
+  path: /metadata/namespace
+  value: blue
+- op: replace
+  path: /spec/host
+  value: blue.apps.argondf.cp.fyre.ibm.com
