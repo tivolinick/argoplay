@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: appoapps
+  namespace: argocd
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  project: default
+  source:
+    path: appOapps
+    repoURL: https://github.com/tivolinick/argoplay
+    targetRevision: master
+  destination:
+    namespace: appoapps
+    server: https://api.argondf.cp.fyre.ibm.com:6443
+  syncPolicy:
+    automated:
+      selfHeal: true
+      prune: true
