@@ -1,0 +1,15 @@
+
+#argocd login --insecure argocd-server-argocd.apps.argondf.cp.fyre.ibm.com
+
+
+argo_pwd=$(oc get secret openshift-gitops-cluster \
+               -n openshift-gitops \
+               -o go-template='{{index .data "admin.password"|base64decode}}') \
+&& argo_url=$(oc get route openshift-gitops-server \
+               -n openshift-gitops \
+               -o jsonpath='{.spec.host}') \
+&& argocd login "${argo_url}" \
+      --username admin \
+      --password "${argo_pwd}" \
+      --insecure
+
