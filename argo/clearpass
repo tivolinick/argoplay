@@ -1,0 +1,8 @@
+
+oc delete pod/$(oc get pods | grep argocd-server | awk '{print $1}')
+kubectl patch secret argocd-secret  -p '{"data": {"admin.password": null, "admin.passwordMtime": null}}' -n argocd
+while [ 1 ] ; do
+  oc get pods
+  sleep 5
+  echo --------------------------------------
+done

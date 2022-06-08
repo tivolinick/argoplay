@@ -1,19 +1,19 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: colouredbox
+  name: appoapps
   namespace: openshift-gitops
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   project: default
   source:
-    path: bgd
+    path: appOapps
     repoURL: https://github.com/tivolinick/argoplay
     targetRevision: master
   destination:
-    namespace: bgd
-    server: https://api.ndfargo.cp.fyre.ibm.com:6443
+    namespace: appoapps
+    server: https://api.argondf.cp.fyre.ibm.com:6443
   syncPolicy:
     automated:
       selfHeal: true
