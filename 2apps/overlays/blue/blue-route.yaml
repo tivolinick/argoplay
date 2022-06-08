@@ -3,4 +3,4 @@
   value: blue
 - op: replace
   path: /spec/host
-  value: blue.apps.argondf.cp.fyre.ibm.com
+  value: blue.apps.ndfargo.cp.fyre.ibm.com

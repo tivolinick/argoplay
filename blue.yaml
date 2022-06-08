@@ -13,7 +13,7 @@ spec:
     targetRevision: master
   destination:
     namespace: blue
-    server: https://api.argondf.cp.fyre.ibm.com:6443
+    server: https://api.ndfargo.cp.fyre.ibm.com:6443
   syncPolicy:
     automated:
       selfHeal: true
