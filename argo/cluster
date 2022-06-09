@@ -1,1 +1,1 @@
-cluster add
+argocd cluster add <CONTEXT>
